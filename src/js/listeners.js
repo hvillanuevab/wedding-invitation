@@ -6,7 +6,7 @@ const capturingQueryParam = async () => {
     try {
       let parsedData;
       if (!sessionStorage.getItem('WEDDING_QR_CODE')) {
-        const rawData = await fetch(`http://134.122.124.135:2000/api/v1/wedding/invitation/${code}`);
+        const rawData = await fetch(`https://educateonline.edu.pe:8433/api/v1/wedding/invitation/${code}`);
         parsedData = await rawData.json();
         if (parsedData.length === 0) throw new Error();
         else sessionStorage.setItem('WEDDING_QR_CODE', JSON.stringify(parsedData));
