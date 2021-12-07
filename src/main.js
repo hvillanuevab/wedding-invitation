@@ -1,14 +1,17 @@
 import 'animate.css';
-
 import './scss/styles.scss';
-import HTMLDesktopTemplate from './templates/swiper-desktop.template.html';
-import HTMLMobileTemplate from './templates/flipbook-mobile.template.html';
-import HTMLLoaderTemplate from './templates/loader.template.html';
 
 import {
-  counterListener, mobileListener, hideLoaderListener,
-  capturingQueryParam, renderQRCode,
+  capturingQueryParam,
+  counterListener,
+  hideLoaderListener,
+  mobileListener,
+  renderQRCode,
 } from './js/listeners';
+
+import HTMLDesktopTemplate from './templates/swiper-desktop.template.html';
+import HTMLLoaderTemplate from './templates/loader.template.html';
+import HTMLMobileTemplate from './templates/flipbook-mobile.template.html';
 import flipbookInitializer from './js/flipbook-initializer';
 import swiperInitializer from './js/swiper-initializer';
 
@@ -20,7 +23,7 @@ const setContentVariable = async (mql) => {
     hideLoaderListener(() => {
       document.querySelector('.js-main-content').innerHTML = HTMLDesktopTemplate;
       swiperInitializer();
-      counterListener('2022-02-05 12:30:00');
+      counterListener('2022-02-05T12:30:00');
       // INSERTING QR CODE IN THE DOM
       renderQRCode(qrCode);
     });
@@ -30,7 +33,7 @@ const setContentVariable = async (mql) => {
       document.querySelector('.js-main-content').innerHTML = HTMLMobileTemplate;
       flipbookInitializer();
       mobileListener(); // TO RESIZE FIPBOOK
-      counterListener('2022-02-05 12:30:00');
+      counterListener('2022-02-05T12:30:00');
       // INSERTING QR CODE IN THE DOM
       renderQRCode(qrCode);
     });

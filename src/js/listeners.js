@@ -30,8 +30,8 @@ const mobileListener = () => {
 
 const handleSetDigitFormat = (digit) => ((String(digit).length === 1) ? `0${digit}` : digit);
 
-const counterListener = (stringDate = '2040-01-13 15:30:00') => {
-  const dateTarget = new Date(stringDate);
+const counterListener = (stringDate = '2040-01-13T15:30:00') => {
+  const dateTarget = new Date(stringDate.replace(/\s/, 'T')+'Z');
   // DOM REFERENCES
   const DOMSeconds = document.querySelector('.js-seconds');
   const DOMMinutes = document.querySelector('.js-minutes');
@@ -45,6 +45,7 @@ const counterListener = (stringDate = '2040-01-13 15:30:00') => {
   const processReference = () => {
     const now = new Date();
     const remainingTime = dateTarget - now;
+
     DOMDays.textContent = handleSetDigitFormat(
       Math.floor(remainingTime / milisecondsInADay),
     );
@@ -64,7 +65,7 @@ const counterListener = (stringDate = '2040-01-13 15:30:00') => {
 const hideLoaderListener = (callback) => {
   // animate__slow: 1s SPEED TIME
   document.querySelector('.js-loader').classList.add('animate__fadeOutDown');
-  setTimeout(callback, 300);
+  setTimeout(callback, 700);
 };
 
 const renderQRCode = (qrCodeRef) => {
