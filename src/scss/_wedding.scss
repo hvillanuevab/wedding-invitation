@@ -138,7 +138,7 @@
           }
         }
         .qr-code {
-          max-height: 20%;
+          max-height: 15%;
           &.is-hidden {
             display: none;
           }
@@ -166,7 +166,7 @@
           }
         }
         .qr-code {
-          width: 140px;
+          width: 100px;
           &.is-hidden {
             display: none;
           }
@@ -290,6 +290,137 @@
     margin-bottom: 3.7em;
   }
 
- 
+@media (min-width: 576px) { 
+  .reception_web {
+    .reception_top {
+      margin-bottom: 0%;
+    }
+    .reception-title {
+      height: 2%; 
+      margin-left: 5em;
+      margin-bottom: 1.7em;
+    }
+    .reception-names{
+      margin-bottom: 1.7em;
+    }
+    .reception-wait{
+      height: 1%; 
+      margin-bottom: 0.4em;
+    }
+    .reception-date{
+      height: 2.8%;
+      margin-bottom: 1.7em;
+    }
+    .reception-address{
+      height: 5%;
+      margin-bottom: 1em;
+    }
+    .qr-code{
+      width: 50px;
+    }
+    .qr-passes{
+      font-size: 0.5rem!important;
+    }
+  }
+}
+
+@media (min-width: 768px) { 
+  .reception_web {
+    .reception_top {
+      margin-bottom: 0%;
+    }
+    .reception-title {
+      height: 3%; 
+      margin-left: 5em;
+      margin-bottom: 1.7em;
+    }
+    .reception-names{
+      margin-bottom: 1.7em;
+    }
+    .reception-wait{
+      height: 1.6%; 
+      margin-bottom: 0.3em;
+    }
+    .reception-date{
+      height: 4.6%;
+      margin-bottom: 1.7em;
+    }
+    .reception-address{
+      height: 7%;
+      margin-bottom: 1em;
+    }
+    .qr-code{
+      width: 80px;
+    }
+    .qr-passes{
+      font-size: 0.9rem!important;
+    }
+  }
+  
+ }
+
+@media (min-width: 992px) { 
+  .reception_web{
+    .reception_top {
+      margin-bottom: 17%;
+    }
+    .reception-title {
+      height: 3%; 
+      margin-left: 8em;
+      margin-bottom: 1.7em;
+    }
+    .reception-names{
+      margin-bottom: 1.7em;
+    }
+    .reception-wait{
+      height: 2%; 
+      margin-bottom: 0.3em;
+    }
+    .reception-date{
+      height: 6%;
+      margin-bottom: 2em;
+    }
+    .reception-address{
+      height: 7%;
+      margin-bottom: 1em;
+    }
+    .qr-passes{
+      font-size: 1rem!important;
+    }
+  } 
+ }
+
+
+@media (min-width: 1200px) { 
+  .reception_web {
+    .reception_top {
+      margin-bottom: 18%;
+    }
+    .reception-title {
+      height: 4%; 
+      margin-left: 8em;
+      margin-bottom: 1.7em;
+    }
+    .reception-names{
+      margin-bottom: 1.7em;
+    }
+    .reception-wait{
+      height: 2.4%; 
+      margin-bottom: 0.5em;
+    }
+    .reception-date{
+      height: 7%;
+      margin-bottom: 2em;
+    }
+    .reception-address{
+      height: 9%;
+      margin-bottom: 0.9em;
+    }
+    .qr-passes{
+      font-size: 1.3rem!important;
+    }
+  } 
+}
+
 }
 // END CONTROLS FOR NAVIGATION IN FLIPBOOK AND SWIPER

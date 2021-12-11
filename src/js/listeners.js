@@ -71,7 +71,12 @@ const hideLoaderListener = (callback) => {
 const renderQRCode = (qrCodeRef) => {
   if (qrCodeRef) {
     document.querySelector('.js-qr-code').setAttribute('src', qrCodeRef[0].url);
-    document.querySelector('.js-qr-passes').textContent = `Pases: ${qrCodeRef[0].passes}`;
+    if (qrCodeRef[0].passes>0) {
+      document.querySelector('.js-qr-passes').textContent = `(${qrCodeRef[0].passes}) ${(qrCodeRef[0].passes>1 ? 'Pases' : 'Pase')}`
+    } else {
+      document.querySelector('.js-qr-passes').textContent = `Sin pases`
+    }
+    ;
     setTimeout(() => {
       document.querySelector('.js-qr-loader').classList.add('is-hidden');
       document.querySelector('.js-qr-code').classList.remove('is-hidden');
