@@ -139,6 +139,7 @@
         }
         .qr-code {
           max-height: 15%;
+          cursor: pointer;
           &.is-hidden {
             display: none;
           }
@@ -167,6 +168,7 @@
         }
         .qr-code {
           width: 100px;
+          cursor: pointer;
           &.is-hidden {
             display: none;
           }

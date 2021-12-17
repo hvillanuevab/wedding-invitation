@@ -23,7 +23,7 @@ const setContentVariable = async (mql) => {
     hideLoaderListener(() => {
       document.querySelector('.js-main-content').innerHTML = HTMLDesktopTemplate;
       swiperInitializer();
-      counterListener('2022-02-05T12:30:00');
+      counterListener('2022-02-05T14:00:00');
       // INSERTING QR CODE IN THE DOM
       renderQRCode(qrCode);
     });
@@ -33,11 +33,19 @@ const setContentVariable = async (mql) => {
       document.querySelector('.js-main-content').innerHTML = HTMLMobileTemplate;
       flipbookInitializer();
       mobileListener(); // TO RESIZE FIPBOOK
-      counterListener('2022-02-05T12:30:00');
+      counterListener('2022-02-05T14:00:00');
       // INSERTING QR CODE IN THE DOM
       renderQRCode(qrCode);
     });
   }
+
+  document.addEventListener("click", e => {
+    if (e.target.className === "c-modal js-modal-target is-active") {
+      const modalRef = document.querySelector('.js-modal-target');
+      modalRef.style.display = "none";
+    }
+
+  });
 };
 setContentVariable(smallBp);
 smallBp.addEventListener('change', setContentVariable);
