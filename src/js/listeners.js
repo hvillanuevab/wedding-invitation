@@ -98,7 +98,6 @@ const openModal = (parsedData) => {
   const modalRef = document.querySelector('.js-modal-target');
   modalRef.style.display = "flex";
 
-  console.log(parsedData);
   if (parsedData[0].invitados.length>0) {
     const size =parsedData[0].invitados.length;
     const modaContent = document.querySelector('.js-modal-content');
@@ -149,8 +148,6 @@ const saveInvitation = async (idInvitation, state) => {
   const sessionData = sessionStorage.getItem('WEDDING_QR_CODE');
   const parsedData = JSON.parse(sessionData);
   parsedData[0].confirmed = state;
-  console.log(parsedData[0]);
-  console.log(state);
   sessionStorage.setItem('WEDDING_QR_CODE', JSON.stringify(parsedData));
   
   const modaButton = document.querySelector('.js-modal-confirm');

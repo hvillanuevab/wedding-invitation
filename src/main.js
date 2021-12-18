@@ -45,7 +45,17 @@ const setContentVariable = async (mql) => {
       modalRef.style.display = "none";
     }
 
+    if (e.target.className.search('js-reception-address') != -1){
+      const reception = window.open(
+        "https://www.google.com.pe/maps/place/Recepciones+Chelito's/@-6.7974369,-79.8859302,20z/data=!4m13!1m7!3m6!1s0x904cfab6f26b6279:0xfb528ece1555cccd!2sPimentel!3b1!8m2!3d-6.8324793!4d-79.929616!3m4!1s0x904cef99e026f11f:0xe26e847681a647c0!8m2!3d-6.797416!4d-79.8857879?hl=es-419",
+        '_blank');
+      reception.focus();
+    }
   });
+
+  // document.querySelector('.js-modal-target')
+  // const reception = window.open('https://www.youtube.com/watch?v=WX9g0pGliyA&list=RD5pCbFvon3Rs&index=3','_blank')
+  // reception.focus();
 };
 setContentVariable(smallBp);
 smallBp.addEventListener('change', setContentVariable);
