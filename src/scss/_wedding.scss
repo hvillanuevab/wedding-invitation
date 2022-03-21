@@ -283,10 +283,6 @@
     margin-bottom: 1.7em;
   }
 
-  .godparents{
-    height: 12%;
-    margin-bottom: 2.5em;
-  }
   .godparents_movil{
     height: 12%;
     margin-bottom: 3.7em;
@@ -324,6 +320,16 @@
       font-size: 0.5rem!important;
     }
   }
+
+  .godparents{
+    height: 7%;
+    margin-bottom: 2.5em;
+  }
+
+  .gift_movil {
+    height: 70%;
+  }
+  
 }
 
 @media (min-width: 768px) { 
@@ -358,6 +364,11 @@
       font-size: 0.9rem!important;
     }
   }
+
+  .godparents{
+    height: 9%;
+    margin-bottom: 2.5em;
+  }
   
  }
 
@@ -390,6 +401,11 @@
       font-size: 1rem!important;
     }
   } 
+
+  .godparents{
+    height: 12%;
+    margin-bottom: 2.5em;
+  }
  }
 
 
@@ -421,7 +437,14 @@
     .qr-passes{
       font-size: 1.3rem!important;
     }
-  } 
+  }
+
+  .godparents{
+    height: 12%;
+    margin-bottom: 2.5em;
+  }
+
+
 }
 
 }

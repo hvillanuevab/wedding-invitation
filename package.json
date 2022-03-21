@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
+    "html5-qrcode": "^2.1.6",
     "swiper": "^7.2.0"
   }
 }
